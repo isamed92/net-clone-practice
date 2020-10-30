@@ -1,13 +1,16 @@
 import React from 'react';
 import './App.css';
-import  Row  from './Row';
-import axios from './axios.js'
+import Row from './Row';
+import requests from './requests';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>A great netflix clone</h1>
-      <Row title="NETFLIX ORIGINALS" />
+      <Row
+        title='NETFLIX ORIGINALS'
+        fetchUrl={requests.fetchNetflixOriginals}
+      />
     </div>
   );
 }
